@@ -12,11 +12,19 @@ function Search () {
     // in this case, we
 
     useEffect(() => {
+        // note!!
+        // a rule of hooks is that you *must not use* hooks
+        //    - conditionally
+        //    - in loops
+        //    - in other functions
+        // Hooks *need* to be run in the same order throughout a component
+        // thus, only call them at a top level
+        // and if you need conditionals, call them within the hook:
         if (prevSearches.length === 5) {
             let clippedPrevSearches = prevSearches.slice(0, 4);
             setPrevSearch(clippedPrevSearches);
         }
-    })
+    });
 
     return (
         <div className="search-container">
@@ -27,7 +35,7 @@ function Search () {
                 onChange={ e => setSearch(e.target.value) }
             />
           <button onClick={() => {
-              setTimesSearch(timesSearch + 1)
+              setTimesSearch(timesSearch + 1);
               const newPrevSearches = prevSearches.slice();
               newPrevSearches.unshift(search);
               setPrevSearch(newPrevSearches);

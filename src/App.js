@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Search from "./components/search-5.jsx";
+import Search from "./components/search-7.jsx";
 
 class App extends Component {
   render() {
@@ -11,7 +10,9 @@ class App extends Component {
           <h1>Gif Grabber</h1>
         </header>
         <p>Go look up some gifs!</p>
-        <Search />
+        <div>
+            <Search />
+        </div>
       </div>
     );
   }
