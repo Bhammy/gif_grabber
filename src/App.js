@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Search from "./components/search-3.jsx";
+import Search from "./components/search-5.jsx";
 
 class App extends Component {
   render() {
