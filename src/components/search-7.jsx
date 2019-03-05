@@ -35,11 +35,15 @@ function Search () {
           >
                 Search!
             </button>
-            <div>
-                <p>Previous searches:</p>
-                { prevSearches.map( (prev, idx) => <p key={`idx-${prev}`}>{prev}</p>) }
+            <div style={{display: "flex", marginTop: "15px"}}>
+                <div style={{width: "25%"}}>
+                    <p>Previous searches:</p>
+                    { prevSearches.map( (prev, idx) => <p key={`idx-${prev}`}>{prev}</p>) }
+                </div>
+                <div style={{width: "50%"}}>
+                    { gifs.map( (gif,idx) => <img key={idx} src={gif} />) }
+                </div>
             </div>
-            { gifs.map( (gif,idx) => <img key={idx} src={gif} />) }
         </div>
     );
 }
