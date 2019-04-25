@@ -12,7 +12,7 @@ through
 
 ### `src/components/search-7`
 
-- in which the comments will guide a reader through the basics of how an app can be built - step by step - with React Hooks, approaching the complexity of traditional class-based React components.
+\- in which the comments will guide a reader through the basics of how an app can be built - step by step - with React Hooks, approaching the complexity of traditional class-based React components.
 
 Future goals include adding more components, additional styling, and exploring how to measure the performance of hooks.
 
